@@ -6,4 +6,6 @@
 <p></p>
 ![inbox](https://github.com/dvo/solid/blob/master/Capture2.JPG)
 <p></p>
+![friends](https://github.com/dvo/solid/blob/master/Capture3.JPG)
+<p></p>
 ![responsive](https://github.com/dvo/solid/blob/master/responsive.png)
