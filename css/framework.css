@@ -158,6 +158,16 @@ details summary div:first-child {
 details summary div:last-child {
     text-align: right;
 }
+details details summary {
+    background: transparent;
+    box-shadow: none;
+    border-top: none;
+}
+details details summary:focus {
+    box-shadow: none;
+    border-top: none;
+}
+
 header {
     display: grid;
     grid-template-columns: auto auto auto;
