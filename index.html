@@ -38,8 +38,13 @@
                 }
             });
 
+            let urlParams = new URLSearchParams(window.location.search);
+            let page = urlParams.get('page');
+            if (!page) {
+                page = 'home';
+            }
             // Navigation
-            $('main').load(`html/home.html`, function() {
+            $('main').load(`html/${page}.html`, function() {
                 $('main').css("opacity", "0.2");
                 $('main').fadeTo(1000, 1);
                 //$('.profile-photo').fadeTo(1000, 1);
