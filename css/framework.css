@@ -96,8 +96,6 @@ section ul li::before {
 }
 .heading {
     padding: 20px;
-    /*border-bottom: 1px solid #323961;
-    box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);*/
 }
 details summary {
     display: grid;
@@ -181,17 +179,8 @@ header div:last-child {
     grid-auto-flow: column;
     text-align: center;
     line-height: 40px;
-    /*grid-gap: 10px;*/
-    /*padding: 0 10px;*/
     cursor: pointer;
 }
-
-/*
-.grid-auto-flow div:hover {
-    color: #dd4b39;
-    cursor: pointer;
-}*/
-
 .align-left {
     text-align: left;
 }
@@ -232,12 +221,6 @@ nav div:last-child {
 .spacer {
     height: 20px;
     width: 100%;
-}
-.closed {
-    display: none;
-}
-.open {
-    display: block;
 }
 .fa-sign-out,
 .fa-edit {
@@ -284,9 +267,6 @@ nav div:last-child {
     box-sizing: border-box;
 }
 .form-control {
-    /*-webkit-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
-    box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);*/
     box-shadow: 0 0 15px rgb(50, 57, 97, 0.5);
     display: block;
     width: 100%;
@@ -294,30 +274,11 @@ nav div:last-child {
     font-size: 14px;
     line-height: 1.42857143;
     color: #fff;
-    /*background: #191d33;*/
     background: transparent;
     background-image: none;
     border: 1px solid #323961;
-    /* border: 1px solid #7c4dff; */
     border-radius: 4px;
     box-sizing: border-box;
-}
-form .form-control {
-    width: 100%;
-    height: 34px;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    border-right: 0;
-}
-form .btn {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    width: 100%;
-    height: 34px;
-}
-form {
-    display: grid;
-    grid-template-columns: 6fr 1fr;
 }
 input,
 textarea,
@@ -420,14 +381,9 @@ select:focus > option:checked {
     box-shadow: 0 0 10px rgb(0, 141, 76, 1), 0 0 10px rgb(0, 141, 76, 0.2) inset;
 }
 .btn-dark {
-    /*-webkit-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
-    box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);*/
-    /*background: #191d33;*/
     background: transparent;
     border: 1px solid #323961;
     box-shadow: 0 0 15px rgb(50, 57, 97, 0.3), 0 0 15px rgb(50, 57, 97, 0.3) inset;
-    /* box-shadow: 0px 0px 15px #242946; */
     color: #fff;
 }
 .btn-align-center {
@@ -613,12 +569,6 @@ small::before {
 @media only screen and (max-width: 900px) {
     body {
         overflow-y: scroll;
-    }
-    .col:first-child .open {
-        display: none;
-    }
-    .col:first-child .closed {
-        display: block;
     }
     #container {
         height: auto;
