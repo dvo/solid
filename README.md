@@ -1,6 +1,6 @@
 # A CSS framework for Solid PODs
 
-<p>NOTE: This framework is under construction.</p>
+<p>NOTE: This framework is under construction. You can see a demo <a href="https://dvo.github.io/solid/">here</a>.</p>
 
 ![home](https://github.com/dvo/solid/blob/master/Capture.JPG)
 <p></p>
