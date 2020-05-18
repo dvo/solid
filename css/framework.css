@@ -27,7 +27,7 @@ a {
 }
 
 ::-webkit-scrollbar {
-    width: 20px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
     background: #191d33;
@@ -38,7 +38,7 @@ a {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    border: 6px solid #191d33;
+    /*border: 6px solid #191d33;*/
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #7c4dff;
