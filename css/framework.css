@@ -167,7 +167,6 @@ details details summary:focus {
     box-shadow: none;
     border-top: none;
 }
-
 header {
     display: grid;
     grid-template-columns: auto auto auto;
