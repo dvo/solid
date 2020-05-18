@@ -55,50 +55,31 @@ a {
     display: grid;
     grid-auto-flow: column;
     overflow: hidden;
-    /*display: grid;
-    grid-template-columns: 1fr;*/
-}
-.row {
-    display: grid;
-    grid-auto-flow: column;
-    overflow: hidden;
 }
 .col {
     -webkit-box-shadow: inset 0px 0px 74px 23px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: inset 0px 0px 74px 23px rgba(0, 0, 0, 0.51);
     box-shadow: inset 0px 0px 74px 23px rgba(0, 0, 0, 0.51);
     overflow-y: scroll;
-    /*border: 1px solid #000;*/
-    border-bottom: 1px solid #323961;
-    /*box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);*/
 }
 .col:last-child {
     overflow-y: auto;
 }
 section {
     padding: 20px;
-    /*-webkit-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
-    -moz-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
-    box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);*/
 }
 .inner-shadow {
     -webkit-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
     box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
 }
+
+/* This needs to remove as it is only being used for the top nav */
+
 .blue-border-bottom {
     border-bottom: 1px solid #323961;
     box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51), 0px 5px 10px rgb(124, 77, 255, 0.1);
-    /*box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);*/
 }
-
-/*
-section section {
-    -webkit-box-shadow: none;
-    -moz-box-shadow: none;
-    box-shadow: none;
-}*/
-
 section ul li {
     padding: 8px;
     list-style: none;
@@ -111,7 +92,7 @@ section ul li::before {
     font-variant: normal;
     text-rendering: auto;
     margin-right: 10px;
-    content: "\25BA";
+    content: "\25B7";
 }
 .heading {
     padding: 20px;
