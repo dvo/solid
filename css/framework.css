@@ -53,7 +53,10 @@ a {
     box-shadow: inset 0px 0px 74px 74px rgba(0, 0, 0, 0.7);
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    overflow: hidden;
+    /*display: grid;
+    grid-template-columns: 1fr;*/
 }
 .row {
     display: grid;
@@ -71,6 +74,11 @@ a {
 }
 section {
     padding: 20px;
+    /*-webkit-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
+    box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);*/
+}
+.inner-shadow {
     -webkit-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
     box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
@@ -101,8 +109,8 @@ section ul li::before {
 }
 .heading {
     padding: 20px;
-    border-bottom: 1px solid #323961;
-    box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);
+    /*border-bottom: 1px solid #323961;
+    box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);*/
 }
 details summary {
     display: grid;
@@ -113,11 +121,27 @@ details summary {
     padding: 0 20px;
     cursor: pointer;
     background: rgb(9, 11, 18, 0.3);
-    border-top: 1px solid #323961;
-    border-bottom: 1px solid #323961;
     position: relative;
     box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);
     list-style: none;
+    border-top: 1px solid #323961;
+    border-bottom: 1px solid #323961;
+}
+details:nth-of-type(even) summary {
+    border-top: none;
+    border-bottom: none;
+}
+details:nth-of-type(odd) section {
+    border-bottom: 1px solid #323961;
+}
+details:nth-of-type(even) section {
+    border-top: 1px solid #323961;
+}
+details:last-child summary {
+    border-bottom: 1px solid #323961;
+}
+details:last-child section {
+    border-top: none;
 }
 details > summary::-webkit-details-marker {
     display: none;
@@ -161,8 +185,8 @@ header div:last-child {
     grid-auto-flow: column;
     text-align: center;
     line-height: 40px;
-    grid-gap: 10px;
-    padding: 0 10px;
+    /*grid-gap: 10px;*/
+    /*padding: 0 10px;*/
     cursor: pointer;
 }
 
@@ -247,7 +271,8 @@ nav div:last-child {
     display: grid;
     grid-template-columns: 6fr 1fr;
 }
-.form-grid input {
+.form-grid input,
+.form-grid select {
     width: 100%;
     height: 34px;
     border-top-right-radius: 0;
@@ -596,12 +621,10 @@ small::before {
     }
     #container {
         height: auto;
+        display: block;
     }
     .col {
         overflow: auto;
-    }
-    .row {
-        display: block;
     }
     .row-trusted-apps {
         display: block;
