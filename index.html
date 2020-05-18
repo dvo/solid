@@ -71,21 +71,23 @@
                 <div></div>
                 <img class="logo" src="images/solid.png">
             </section>
-            <header class="expand">
-                <div></div>
-                <div>Main Menu</div>
-                <div><i class="fa fa-bars"></i></div>
-            </header>
-            <section class="open blue-border-bottom">
-                <nav>
-                    <div><a class="active page-link" data-page="home" href=""><i class="fa fa-home fa-fw"></i>Home</a></div>
-                    <div><a class="page-link" data-page="inbox" href=""><i class="fa fa-envelope fa-fw"></i>Inbox (4)</a></div>
-                    <div><a class="page-link" data-page="filemanager" href=""><i class="fa fa-folder-o fa-fw"></i>File Manager</a></div>
-                    <div><a class="page-link" data-page="friends" href=""><i class="fa  fa-share-alt fa-fw"></i>Friends (9)</a></div>
-                    <div><a class="page-link" data-page="source" href=""><i class="fa fa-code  fa-fw"></i>VCARD</a></div>
-                    <div><a class="page-link" data-page="deleteaccount" href=""><i class="fa fa-trash fa-fw"></i>Delete Account</a></div>
-                </nav>
-            </section>
+            <details open>
+                <summary>
+                    <div></div>
+                    <div>Main Menu</div>
+                    <div><i class="fa fa-bars"></i></div>
+                </summary>
+                <section>
+                    <nav>
+                        <div><a class="active page-link" data-page="home" href=""><i class="fa fa-home fa-fw"></i>Home</a></div>
+                        <div><a class="page-link" data-page="inbox" href=""><i class="fa fa-envelope fa-fw"></i>Inbox (4)</a></div>
+                        <div><a class="page-link" data-page="filemanager" href=""><i class="fa fa-folder-o fa-fw"></i>File Manager</a></div>
+                        <div><a class="page-link" data-page="friends" href=""><i class="fa  fa-share-alt fa-fw"></i>Friends (9)</a></div>
+                        <div><a class="page-link" data-page="source" href=""><i class="fa fa-code  fa-fw"></i>VCARD</a></div>
+                        <div><a class="page-link" data-page="deleteaccount" href=""><i class="fa fa-trash fa-fw"></i>Delete Account</a></div>
+                    </nav>
+                </section>
+            </details>
         </div>
         <div class="col">
             <div class="grid-auto-flow blue-border-bottom">
@@ -116,160 +118,168 @@
                 </div>
             </section>
 
-            <header class="expand">
-                <div>Basic Info</div>
-                <div></div>
-                <div><i class="fa fa-plus"></i></div>
-            </header>
-            <section class="closed">
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Name" />
+            <details>
+                <summary>
+                    <div>Basic Info</div>
+                    <div></div>
+                    <div><i class="fa fa-plus"></i></div>
+                </summary>
+                <section>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Name" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                    <div class="spacer"></div>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Role" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                </form>
-                <div class="spacer"></div>
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Role" />
+                    <div class="spacer"></div>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Organization" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                    </div>
-                </form>
-                <div class="spacer"></div>
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Organization" />
-                    </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                    </div>
-                </form>
-            </section>
+                </section>
+            </details>
 
-            <header class="expand">
-                <div>Address</div>
-                <div></div>
-                <div><i class="fa fa-plus"></i></div>
-            </header>
-            <section class="closed">
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Street address" />
+            <details>
+                <summary>
+                    <div>Address</div>
+                    <div></div>
+                    <div><i class="fa fa-plus"></i></div>
+                </summary>
+                <section>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Street address" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                    <div class="spacer"></div>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Locality" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                </form>
-                <div class="spacer"></div>
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Locality" />
+                    <div class="spacer"></div>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Postal Code" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                    <div class="spacer"></div>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Region" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                </form>
-                <div class="spacer"></div>
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Postal Code" />
+                    <div class="spacer"></div>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Country" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                    </div>
-                </form>
-                <div class="spacer"></div>
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Region" />
-                    </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                    </div>
-                </form>
-                <div class="spacer"></div>
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Country" />
-                    </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                    </div>
-                </form>
-                <div class="spacer"></div>
-                <button class="btn btn-yellow btn-align-center"><i class="fa fa-plus"></i><span>ADD MORE</span></button>
-            </section>
+                    <div class="spacer"></div>
+                    <button class="btn btn-yellow btn-align-center"><i class="fa fa-plus"></i><span>ADD MORE</span></button>
+                </section>
+            </details>
 
-            <header class="expand">
-                <div>Email &amp; Phone</div>
-                <div></div>
-                <div><i class="fa fa-plus"></i></div>
-            </header>
-            <section class="closed">
-                <select class="form-control">
-                    <option>Home</option>
-                    <option>Dom</option>
-                    <option>ISDN</option>
-                    <option>Internet</option>
-                    <option>Intl</option>
-                    <option>Label</option>
-                    <option>Parcel</option>
-                    <option>Postal</option>
-                    <option>Pref</option>
-                    <option>Work</option>
-                    <option>X400</option>
-                </select>
-                <div class="spacer"></div>
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Email address" />
+            <details>
+                <summary>
+                    <div>Email &amp; Phone</div>
+                    <div></div>
+                    <div><i class="fa fa-plus"></i></div>
+                </summary>
+                <section>
+                    <select class="form-control">
+                        <option>Home</option>
+                        <option>Dom</option>
+                        <option>ISDN</option>
+                        <option>Internet</option>
+                        <option>Intl</option>
+                        <option>Label</option>
+                        <option>Parcel</option>
+                        <option>Postal</option>
+                        <option>Pref</option>
+                        <option>Work</option>
+                        <option>X400</option>
+                    </select>
+                    <div class="spacer"></div>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Email address" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                    <div class="spacer"></div>
+                    <button class="btn btn-yellow btn-align-center"><i class="fa fa-plus"></i><span>ADD MORE</span></button>
+                    <div class="spacer"></div>
+                    <select class="form-control">
+                        <option>Home</option>
+                        <option>Dom</option>
+                        <option>ISDN</option>
+                        <option>Internet</option>
+                        <option>Intl</option>
+                        <option>Label</option>
+                        <option>Parcel</option>
+                        <option>Postal</option>
+                        <option>Pref</option>
+                        <option>Work</option>
+                        <option>X400</option>
+                    </select>
+                    <div class="spacer"></div>
+                    <div class="form-grid">
+                        <div>
+                            <input class="form-control" placeholder="Phone number" />
+                        </div>
+                        <div>
+                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                        </div>
                     </div>
-                </form>
-                <div class="spacer"></div>
-                <button class="btn btn-yellow btn-align-center"><i class="fa fa-plus"></i><span>ADD MORE</span></button>
-                <div class="spacer"></div>
-                <select class="form-control">
-                    <option>Home</option>
-                    <option>Dom</option>
-                    <option>ISDN</option>
-                    <option>Internet</option>
-                    <option>Intl</option>
-                    <option>Label</option>
-                    <option>Parcel</option>
-                    <option>Postal</option>
-                    <option>Pref</option>
-                    <option>Work</option>
-                    <option>X400</option>
-                </select>
-                <div class="spacer"></div>
-                <form>
-                    <div>
-                        <input class="form-control" placeholder="Phone number" />
-                    </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                    </div>
-                </form>
-                <div class="spacer"></div>
-                <button class="btn btn-yellow btn-align-center"><i class="fa fa-plus"></i><span>ADD MORE</span></button>
-            </section>
+                    <div class="spacer"></div>
+                    <button class="btn btn-yellow btn-align-center"><i class="fa fa-plus"></i><span>ADD MORE</span></button>
+                </section>
+            </details>
 
-            <header class="expand">
-                <div>General Notes</div>
-                <div></div>
-                <div><i class="fa fa-plus"></i></div>
-            </header>
-            <section class="closed">
-                <textarea row="80" class="form-control">Enter some notes about yourself</textarea>
-                <div class="spacer"></div>
-                <button class="btn btn-yellow btn-align-center"><i class="fa fa-save"></i><span>SAVE</span></button>
-            </section>
+            <details>
+                <summary>
+                    <div>General Notes</div>
+                    <div></div>
+                    <div><i class="fa fa-plus"></i></div>
+                </summary>
+                <section>
+                    <textarea row="80" class="form-control">Enter some notes about yourself</textarea>
+                    <div class="spacer"></div>
+                    <button class="btn btn-yellow btn-align-center"><i class="fa fa-save"></i><span>SAVE</span></button>
+                </section>
+            </details>
         </div>
     </div>
