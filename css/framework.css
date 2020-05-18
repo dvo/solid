@@ -29,7 +29,7 @@ a {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: #090b12;
+    background: rgb(9,11,18, 0.3);
     /*background: rgb(0,0,0,0.5);*/
     border-left: 1px solid #323961;
     border-right: 1px solid #323961;
@@ -112,6 +112,8 @@ header {
     grid-gap: 10px;
     padding: 0 20px;
     cursor: pointer;
+    background: rgb(9,11,18, 0.3);
+    border-top: 1px solid #323961;
     border-bottom: 1px solid #323961;
     position: relative;
     box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);
