@@ -50,6 +50,7 @@
                 let text = $(this).text();
                 $('.heading small').text(text);
                 const name = this.dataset.page;
+                window.history.pushState(`?page=${name}`, "Title", `?page=${name}`);
                 $('nav .active').removeClass('active');
                 this.classList.add('active');
                 $('main').load(`html/${name}.html`, function() {
