@@ -64,9 +64,9 @@ a {
     overflow: hidden;
 }
 .col {
-    /*-webkit-box-shadow: inset 0px 0px 74px 23px rgba(0, 0, 0, 0.51);
+    -webkit-box-shadow: inset 0px 0px 74px 23px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: inset 0px 0px 74px 23px rgba(0, 0, 0, 0.51);
-    box-shadow: inset 0px 0px 74px 23px rgba(0, 0, 0, 0.51);*/
+    box-shadow: inset 0px 0px 74px 23px rgba(0, 0, 0, 0.51);
     overflow-y: scroll;
     /*border: 1px solid #000;*/
     border-bottom: 1px solid #323961;
