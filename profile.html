@@ -8,6 +8,76 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/framework.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animate.min.css" />
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+            //$('.col:first-child figure').load(`html/partials/in.html`);
+            $('.flip-card-front').load(`html/partials/out.html`);
+            $('.flip-card-back').load(`html/partials/in.html`);
+        });
+        $(document).on('click', '.fa-edit', function() {
+            //$('.col:first-child figure').css("display", "none");
+            $('.col:first-child figure').removeClass('imageRotateHorizontal');
+            //$('.col:first-child figure').addClass('imageRotateHorizontal');
+
+            const page = this.dataset.page;
+            if (page === 'in') {
+                $('.flip-card-inner').addClass("rotate");
+                //$('.col:first-child figure').load(`html/partials/in.html`);
+                $(this).attr("data-page", "out");
+            } else if (page === 'out') {
+                $('.flip-card-inner').removeClass("rotate");
+                //$('.col:first-child figure').load(`html/partials/out.html`)
+                $(this).attr("data-page", "in");
+            }
+        });
+
+    </script>
+    <style>
+        .flip-card {
+            background-color: transparent;
+            min-width: 300px;
+            /*height: 500px;*/
+            perspective: 1000px;
+        }
+        
+        .rotate {
+            transform: rotateY(180deg);
+        }
+        
+        .flip-card-inner {
+            /*position: relative;
+            width: 100%;
+            height: 100%;*/
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .flip-card-front,
+        .flip-card-back {
+            /*position: absolute;
+            width: 100%;
+            height: 100%;*/
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+        
+        .flip-card-front {
+            background: transparent;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        
+        .flip-card-back {
+            background: transparent;
+            transform: rotateY(180deg);
+        }
+
+    </style>
 </head>
 
 <body>
@@ -16,186 +86,18 @@
             <header>
                 <div><i class="fa fa-search"></i></div>
                 <div>LOGOUT<i class="fa fa-sign-out"></i></div>
-                <div><i class="fa fa-edit"></i></div>
+                <div><i data-page="in" class="fa fa-edit"></i></div>
             </header>
-            <section class="inner-shadow">
-                <div class="form-grid">
-                    <div>
-                        <input class="form-control" placeholder="Name" />
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
                     </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
+                    <div class="flip-card-back">
                     </div>
                 </div>
-            </section>
-            <section>
-                <img class="profile-photo animate__animated animate__fadeIn" src="images/user7-128x128.jpg" />
-                <div class="photo-manager">
-                    <div><i class="fa fa-camera"></i></div>
-                    <div><i class="fa fa-upload"></i></div>
-                    <div><i class="fa fa-trash"></i></div>
-                </div>
-            </section>
-            <section class="inner-shadow">
-                <div class="form-grid">
-                    <div>
-                        <input class="form-control" placeholder="Role" />
-                    </div>
-                    <div>
-                        <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <button class="btn btn-green btn-align-center">ADD FRIEND</button>
-            </section>
-
-            <details>
-                <summary>
-                    <div>Basic Info</div>
-                    <div></div>
-                    <div><i class="fa fa-plus"></i></div>
-                </summary>
-                <section class="animate__animated animate__fadeIn">
-                    <div class="form-grid">
-                        <div>
-                            <input class="form-control" placeholder="Organization" />
-                        </div>
-                        <div>
-                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                        </div>
-                    </div>
-                </section>
-            </details>
-
-            <details>
-                <summary>
-                    <div>Address</div>
-                    <div></div>
-                    <div><i class="fa fa-plus"></i></div>
-                </summary>
-                <section class="animate__animated animate__fadeIn">
-                    <div class="form-grid">
-                        <div>
-                            <input class="form-control" placeholder="Street address" />
-                        </div>
-                        <div>
-                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                        </div>
-                    </div>
-                    <div class="spacer"></div>
-                    <div class="form-grid">
-                        <div>
-                            <input class="form-control" placeholder="Locality" />
-                        </div>
-                        <div>
-                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                        </div>
-                    </div>
-                    <div class="spacer"></div>
-                    <div class="form-grid">
-                        <div>
-                            <input class="form-control" placeholder="Postal Code" />
-                        </div>
-                        <div>
-                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                        </div>
-                    </div>
-                    <div class="spacer"></div>
-                    <div class="form-grid">
-                        <div>
-                            <input class="form-control" placeholder="Region" />
-                        </div>
-                        <div>
-                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                        </div>
-                    </div>
-                    <div class="spacer"></div>
-                    <div class="form-grid">
-                        <div>
-                            <input class="form-control" placeholder="Country" />
-                        </div>
-                        <div>
-                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                        </div>
-                    </div>
-                    <div class="spacer"></div>
-                    <button class="btn btn-yellow btn-align-center"><i class="fa fa-plus"></i><span>ADD MORE</span></button>
-                </section>
-            </details>
-
-            <details>
-                <summary>
-                    <div>Email &amp; Phone</div>
-                    <div></div>
-                    <div><i class="fa fa-plus"></i></div>
-                </summary>
-                <section class="animate__animated animate__fadeIn">
-                    <select class="form-control">
-                        <option>Home</option>
-                        <option>Dom</option>
-                        <option>ISDN</option>
-                        <option>Internet</option>
-                        <option>Intl</option>
-                        <option>Label</option>
-                        <option>Parcel</option>
-                        <option>Postal</option>
-                        <option>Pref</option>
-                        <option>Work</option>
-                        <option>X400</option>
-                    </select>
-                    <div class="spacer"></div>
-                    <div class="form-grid">
-                        <div>
-                            <input class="form-control" placeholder="Email address" />
-                        </div>
-                        <div>
-                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                        </div>
-                    </div>
-                    <div class="spacer"></div>
-                    <button class="btn btn-yellow btn-align-center"><i class="fa fa-plus"></i><span>ADD MORE</span></button>
-                    <div class="spacer"></div>
-                    <select class="form-control">
-                        <option>Home</option>
-                        <option>Dom</option>
-                        <option>ISDN</option>
-                        <option>Internet</option>
-                        <option>Intl</option>
-                        <option>Label</option>
-                        <option>Parcel</option>
-                        <option>Postal</option>
-                        <option>Pref</option>
-                        <option>Work</option>
-                        <option>X400</option>
-                    </select>
-                    <div class="spacer"></div>
-                    <div class="form-grid">
-                        <div>
-                            <input class="form-control" placeholder="Phone number" />
-                        </div>
-                        <div>
-                            <button class="btn btn-dark"><i class="fa fa-save"></i></button>
-                        </div>
-                    </div>
-                    <div class="spacer"></div>
-                    <button class="btn btn-yellow btn-align-center"><i class="fa fa-plus"></i><span>ADD MORE</span></button>
-                </section>
-            </details>
-
-            <details>
-                <summary>
-                    <div>General Notes</div>
-                    <div></div>
-                    <div><i class="fa fa-plus"></i></div>
-                </summary>
-                <section class="animate__animated animate__fadeIn">
-                    <textarea row="80" class="form-control">Enter some notes about yourself</textarea>
-                    <div class="spacer"></div>
-                    <button class="btn btn-yellow btn-align-center"><i class="fa fa-save"></i><span>SAVE</span></button>
-                </section>
-            </details>
+            </div>
+            <!--<figure></figure>-->
         </div>
         <div class="col">
             <header>
