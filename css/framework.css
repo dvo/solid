@@ -160,6 +160,11 @@ header {
     position: relative;
     box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);
 }
+header .fa {
+    margin-left: 10px;
+    color: #dd4b39;
+    text-shadow: 0 0 10px #dd4b39;
+}
 section header {
     border-bottom: none;
     border-radius: 5px;
@@ -221,12 +226,6 @@ nav div:last-child {
 .spacer {
     height: 20px;
     width: 100%;
-}
-.fa-sign-out,
-.fa-edit {
-    margin-left: 10px;
-    color: #dd4b39;
-    text-shadow: 0 0 10px #dd4b39;
 }
 
 /**** font colors ***/
@@ -541,11 +540,39 @@ small::before {
     box-shadow: 0 0 15px rgb(124, 77, 255, 1);
     border: 3px solid #7c4dff;
 }
+
+/**** would be better to merge these styles together ***/
+
+.friends-photos {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: auto auto;
+}
+.friends-photos img {
+    margin: 10px auto;
+    width: 30px;
+    height: 30px;
+    display: block;
+    box-shadow: 0 0 25px rgb(124, 77, 255, 0.5);
+    border: 2px solid #7c4dff;
+    border-radius: 50%;
+    /*filter: grayscale(100%);*/
+}
+.photos img {
+    margin-bottom: 20px;
+    width: 100px;
+    height: 100px;
+    display: block;
+    box-shadow: 0 0 25px rgb(124, 77, 255, 0.5);
+    border: 2px solid #7c4dff;
+    border-radius: 50%;
+    /*filter: grayscale(100%);*/
+}
 .profile-photo {
     height: 120px;
     width: 120px;
     display: block;
-    margin: 20px auto;
+    margin: 0px auto 20px auto;
     border-radius: 50%;
     box-shadow: 0 0 25px rgb(124, 77, 255, 0.5);
     border: 3px solid #7c4dff;
