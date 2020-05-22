@@ -14,17 +14,14 @@ body {
     padding: 0;
     margin: 0;
     background-color: #191d33;
-    background-image: url('../images/bg.png'), url('../images/bg2.png'), url('../images/bg3.png');
-    background-repeat: no-repeat, no-repeat no-repeat;
-    background-position: left top, right top, center bottom;
     line-height: 25px;
 }
 h1,
 h2,
-h3,
-h4 {
+h3 {
     padding: 0;
     margin: 0;
+    font-family: 'OpenSans-Bold';
 }
 h1 {
     font-size: 16px;
@@ -35,21 +32,88 @@ h2 {
 h3 {
     font-size: 14px;
 }
-h4 {
-    font-size: 13px;
-}
 .fa {
     text-shadow: 0 0 10px rgb(255, 255, 255, 0.5);
 }
 a {
     color: #dd4b39;
 }
+hr {
+    height: 20px;
+    width: 100%;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*** This will soon be removed as it is replaced with <hr> ***/
+
+.spacer {
+    height: 20px;
+    width: 100%;
+}
+.center {
+    text-align: center;
+}
+.left {
+    text-align: left;
+}
+
+/* These can be renamed left and right **/
+
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+strong,
+b {
+    font-family: 'OpenSans-Bold';
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+table {
+    text-align: left;
+}
+table td {
+    padding-right: 10px;
+}
+table td:first-child {
+    color: #dd4b39;
+}
+p {
+    margin: 0 0 15px 0;
+}
+p:last-child {
+    margin: 0;
+}
+
+/**** font colors ***/
+
+.red {
+    color: #dd4b39;
+}
+.blue {
+    color: #7c4dff;
+}
+.yellow {
+    color: #e08e0b;
+}
+.green {
+    color: #008d4c;
+}
+
+/******** custom scrollbar ********/
+
 ::-webkit-scrollbar {
     width: 10px;
 }
 ::-webkit-scrollbar-track {
     background: rgb(9, 11, 18, 0.3);
-    /*background: rgb(0,0,0,0.5);*/
     border-left: 1px solid #323961;
     border-right: 1px solid #323961;
     position: relative;
@@ -61,7 +125,6 @@ a {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     -webkit-border-radius: 10px;
     border-radius: 10px;
-    /*border: 6px solid #191d33;*/
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #7c4dff;
@@ -93,12 +156,15 @@ section {
     box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51);
 }
 
-/* This needs to remove as it is only being used for the top nav */
+/* This is only being used for the top nav. Can it be removed? */
 
 .blue-border-bottom {
     border-bottom: 1px solid #323961;
     box-shadow: inset 0px 0px 19px 0px rgba(0, 0, 0, 0.51), 0px 5px 10px rgb(124, 77, 255, 0.1);
 }
+
+/***** Main lists ******/
+
 section ul li {
     padding: 8px;
     list-style: none;
@@ -113,9 +179,36 @@ section ul li::before {
     margin-right: 10px;
     content: "\25B7";
 }
+
+/**** heading e.g. 
+<div class="heading"><i class="fa fa-dashboard fa-fw"></i> Dashboard<small>Home</small></div>
+****/
+
 .heading {
     padding: 20px;
 }
+.heading {
+    font-size: 18px;
+    line-height: 30px;
+    text-transform: capitalize;
+}
+small {
+    font-size: 14px;
+}
+small::before {
+    color: #dd4b39;
+    text-shadow: 0 0 15px #dd4b39;
+    display: inline-block;
+    font-style: bold;
+    font-variant: normal;
+    text-rendering: auto;
+    margin: 0 10px;
+    content: "\25BA";
+    font-size: 12px;
+}
+
+/******** details: Used for all dropdown menus ******/
+
 details summary {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -125,7 +218,6 @@ details summary {
     padding: 0 20px;
     cursor: pointer;
     background: rgb(9, 11, 18, 0.3);
-    /*position: relative;*/
     box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);
     list-style: none;
     border-top: 1px solid #323961;
@@ -165,6 +257,9 @@ details details summary:focus {
     box-shadow: none;
     border-top: none;
 }
+
+/****** header: mostly used at the top of columns. It is similar to details, but doesn't have a dropdown *****/
+
 header {
     display: grid;
     grid-template-columns: auto auto auto;
@@ -180,163 +275,28 @@ header {
     box-shadow: 0px 5px 10px rgb(124, 77, 255, 0.1);
 }
 header .fa {
-    /*margin-left: 10px;*/
     color: #dd4b39;
     text-shadow: 0 0 10px #dd4b39;
+}
+header span {
+    margin-right: 10px;
 }
 section header {
     border-bottom: none;
     border-radius: 5px;
     background: rgba(0, 0, 0, .2);
 }
-
-/***** additions (need to be copied over) *****/
-
-
-/*
-
-NEED TO MAKE H1 LOOK BETTER
-
-Lines changed
-183
-631 - removed bottom margin
-639 - replaced padding with margin-top: 20px;
-489 - box-sizing: border-box;
-*/
-
-
-/*section section {
-    padding: 0;
-}*/
-
-hr {
-    height: 20px;
-    width: 100%;
-    background: none;
-    border: none;
-    margin: 0;
-    padding: 0;
-}
-.btn {
-    box-sizing: border-box;
-}
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: 'OpenSans-Bold';
-}
-
-/*** This isn't a part of the the framework and so should be moved ***/
-
-#view-profile {
-    display: none;
-}
-.center {
-    text-align: center;
-}
-.left {
-    text-align: left;
-}
-#name,
-#role {
-    text-transform: capitalize;
-}
-#name {
-    font-size: 16px;
-}
-strong,
-b {
-    font-family: 'OpenSans-Bold';
-}
-ul {
-    padding: 0;
-    margin: 0;
-}
-.flip-card {
-    background-color: transparent;
-    min-width: 300px;
-    /*height: 500px;*/
-    perspective: 1000px;
-}
-.rotate {
-    transform: rotateY(180deg);
-}
-.flip-card-inner {
-    /*position: relative;
-            width: 100%;
-            height: 100%;*/
-    text-align: center;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
-}
-
-/*.flip-card-inner section {
-            background-color: #191d33;
-        }*/
-
-table {
-    text-align: left;
-}
-table td {
-    padding-right: 10px;
-}
-table td:first-child {
-    color: #dd4b39;
-}
-.flip-card-front,
-.flip-card-back {
-    /*position: absolute;
-            width: 100%;
-            height: 100%;*/
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-}
-.flip-card-front {
-    background: transparent;
-    position: absolute;
-    width: 100%;
-    height: 900px;
-}
-.flip-card-back {
-    background: transparent;
-    transform: rotateY(180deg);
-}
-.edit-icons i {
-    margin: 0 5px;
-}
-.edit-icons {
-    text-align: right;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #323961;
-    margin-bottom: 10px;
-}
-p {
-    margin: 0 0 15px 0;
-}
-p:last-child {
-    margin: 0;
-}
-header span {
-    margin-right: 10px;
-}
-#login {
-    color: #fff;
-    text-decoration: none;
-}
-
-/**** end additions ***/
-
-.grid-auto-flow header {
-    box-shadow: none;
-}
 header div:first-child {
     text-align: left;
 }
 header div:last-child {
     text-align: right;
+}
+
+/**** .grid-auto-flow is a general purpose grid ****/
+
+.grid-auto-flow header {
+    box-shadow: none;
 }
 .grid-auto-flow {
     display: grid;
@@ -345,21 +305,17 @@ header div:last-child {
     line-height: 40px;
     cursor: pointer;
 }
-.align-left {
-    text-align: left;
-}
-.align-right {
-    text-align: right;
-}
+
+/***** I'm not sure what this is being used for *****/
+
 .list-icons i {
     margin-right: 10px;
     color: #7549f1;
     text-shadow: 0 0 15px #7c4dff;
 }
-.active {
-    color: #dd4b39;
-    text-shadow: 0 0 15px rgb(221, 75, 57, 1);
-}
+
+/******** nav: used on the sidebar *********/
+
 nav div {
     padding: 6px 0px;
     border-bottom: 1px solid #101321;
@@ -382,26 +338,9 @@ nav .fa {
 nav div:last-child {
     border: none;
 }
-
-/*** This will soon be removed as it is replaced with <hr> ***/
-.spacer {
-    height: 20px;
-    width: 100%;
-}
-
-/**** font colors ***/
-
-.red {
+.active {
     color: #dd4b39;
-}
-.blue {
-    color: #7c4dff;
-}
-.yellow {
-    color: #e08e0b;
-}
-.green {
-    color: #008d4c;
+    text-shadow: 0 0 15px rgb(221, 75, 57, 1);
 }
 
 /**** forms ****/
@@ -465,6 +404,11 @@ summary:focus {
 select option {
     color: #7c4dff;
 }
+input[type="checkbox"] {
+    vertical-align: middle;
+    margin: 0;
+    box-shadow: 0 0 15px #495075;
+}
 
 /*
 select option:hover, select option:checked {
@@ -497,6 +441,7 @@ select:focus > option:checked {
     background-image: none;
     border: 1px solid transparent;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 .btn {
     padding: 6px 12px;
@@ -563,195 +508,6 @@ button .fa {
 /************** end framework *****************/
 
 
-/************** site specific styles *********/
-
-.turtle {
-    display: grid;
-    grid-template-columns: 30px 120px auto 20px 20px;
-    grid-gap: 8px;
-    padding: 5px;
-    font-family: monospace;
-}
-.turtle div:nth-of-type(1) {
-    color: #e08e0b;
-}
-.turtle div:nth-of-type(2) {
-    color: #7c4dff;
-}
-.turtle div:nth-of-type(2) span {
-    padding: 0 5px;
-    color: #dd4b39;
-}
-.turtle div:nth-of-type(3) {
-    overflow: auto;
-}
-.turtle:nth-of-type(even) {
-    background: rgba(0, 0, 0, .2);
-}
-#logo {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
-#logo div {
-    position: absolute;
-    display: none;
-    left: 50%;
-    top: 50%;
-    margin-left: -45px;
-    margin-top: -45px;
-    height: 90px;
-    width: 90px;
-    border-radius: 50%;
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
-}
-.logo {
-    width: 100px;
-    height: auto;
-    display: block;
-    margin: 20px auto;
-}
-.grid-mailbox {
-    display: grid;
-    grid-template-columns: auto auto 100px 300px 30px auto;
-    grid-gap: 10px;
-    padding: 10px;
-}
-.grid-mailbox div:nth-of-type(1),
-.grid-mailbox div:nth-of-type(2) {
-    text-align: center;
-}
-.grid-mailbox:nth-of-type(even) {
-    background: rgba(0, 0, 0, .2);
-}
-.fa-star {
-    text-shadow: 0 0 15px #e08e0b;
-}
-.row-trusted-apps {
-    display: grid;
-    grid-template-columns: auto 300px 70px;
-    padding: 10px;
-    grid-gap: 8px;
-    cursor: pointer;
-}
-input[type="checkbox"] {
-    vertical-align: middle;
-    margin: 0;
-    box-shadow: 0 0 15px #495075;
-}
-.row-trusted-apps:nth-of-type(even) {
-    background: rgba(0, 0, 0, .2);
-}
-.access-modes {
-    display: grid;
-    grid-auto-flow: column;
-}
-.access-modes div {
-    padding-right: 5px
-}
-.actions {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: auto auto;
-}
-.actions button {
-    width: 100%;
-}
-.row-trusted-apps select,
-.row-trusted-apps input {
-    background: transparent;
-    color: #c1c1c1;
-    border: none;
-    font-family: 'OpenSans-Regular', Sans-Serif;
-}
-.heading {
-    font-size: 18px;
-    line-height: 30px;
-    text-transform: capitalize;
-}
-small {
-    font-size: 14px;
-}
-small::before {
-    color: #dd4b39;
-    text-shadow: 0 0 15px #dd4b39;
-    display: inline-block;
-    font-style: bold;
-    font-variant: normal;
-    text-rendering: auto;
-    margin: 0 10px;
-    content: "\25BA";
-    font-size: 12px;
-}
-.friend-photo {
-    width: 100%;
-    max-width: 120px;
-    height: auto;
-    margin: 20px auto;
-    border-radius: 50%;
-    border: 3px solid rgb(124, 77, 255, 0.5);
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    box-shadow: 0 0 15px rgb(124, 77, 255, 0.5);
-}
-.friend-photo:hover {
-    box-shadow: 0 0 15px rgb(124, 77, 255, 1);
-    border: 3px solid #7c4dff;
-}
-
-/**** would be better to merge these styles together ***/
-
-.friends-photos {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: auto auto;
-}
-.friends-photos img {
-    margin: 10px auto;
-    width: 30px;
-    height: 30px;
-    display: block;
-    box-shadow: 0 0 25px rgb(124, 77, 255, 0.5);
-    border: 2px solid #7c4dff;
-    border-radius: 50%;
-    /*filter: grayscale(100%);*/
-}
-.photos img {
-    margin: 10px auto 20px auto;
-    width: 100px;
-    height: 100px;
-    display: block;
-    box-shadow: 0 0 25px rgb(124, 77, 255, 0.5);
-    border: 2px solid #7c4dff;
-    border-radius: 50%;
-    /*filter: grayscale(100%);*/
-}
-.profile-photo {
-    height: 120px;
-    width: 120px;
-    display: block;
-    margin: 0px auto;
-    border-radius: 50%;
-    box-shadow: 0 0 25px rgb(124, 77, 255, 0.5);
-    border: 3px solid #7c4dff;
-}
-.photo-manager {
-    display: grid;
-    grid-auto-flow: column;
-    margin-top: 20px;
-    grid-gap: 8px;
-    text-align: center;
-    cursor: pointer;
-    color: #dd4b39;
-    font-size: 18px;
-}
-.photo-manager .fa {
-    text-shadow: 0 0 15px rgb(221, 75, 57, 0.5);
-}
-
 /**** media queries ****/
 
 @media only screen and (max-width: 900px) {
@@ -764,19 +520,6 @@ small::before {
     }
     .col {
         overflow: auto;
-    }
-    .row-trusted-apps {
-        display: block;
-        text-align: center;
-    }
-    .row-header {
-        display: none;
-    }
-    .row-trusted-apps div {
-        margin-bottom: 10px;
-    }
-    .grid-mailbox {
-        grid-template-columns: 20px 20px 60px 150px 20px auto;
     }
     .grid-responsive {
         display: block;
