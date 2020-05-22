@@ -14,9 +14,9 @@ body {
     padding: 0;
     margin: 0;
     background-color: #191d33;
-    /*background-image: url('../images/bg.png'), url('../images/bg2.png'), url('../images/bg3.png');
+    background-image: url('../images/bg.png'), url('../images/bg2.png'), url('../images/bg3.png');
     background-repeat: no-repeat, no-repeat no-repeat;
-    background-position: left top, right top, center bottom;*/
+    background-position: left top, right top, center bottom;
     line-height: 25px;
 }
 h1,
